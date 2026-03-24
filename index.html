@@ -10,8 +10,8 @@
     theme: {
       extend: {
         colors: {
-          nectar: '#FEA81F',
-          'nectar-dark': '#E5920A',
+          nectar: '#7C4DFF',
+          'nectar-dark': '#6B3DE8',
           dark: '#23252C',
           'dark-mid': '#2C2F38',
           'dark-soft': '#353840',
@@ -43,12 +43,12 @@
   * { -webkit-font-smoothing: antialiased; }
   .tracking-tightest { letter-spacing: -0.04em; }
   .gradient-text {
-    background: linear-gradient(135deg, #FEA81F 0%, #FFD166 60%, #FEA81F 100%);
+    background: linear-gradient(135deg, #7C4DFF 0%, #A78BFF 60%, #7C4DFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  .glow-nectar { box-shadow: 0 0 80px rgba(254,168,31,0.15); }
+  .glow-nectar { box-shadow: 0 0 80px rgba(124,77,255,0.15); }
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1); }
   .reveal.visible { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 100ms; }
@@ -57,7 +57,7 @@
   .delay-4 { transition-delay: 400ms; }
 
   /* Chat messages */
-  .chat-user { background: #FEA81F; color: #23252C; border-radius: 1rem 1rem 0.25rem 1rem; }
+  .chat-user { background: #7C4DFF; color: #23252C; border-radius: 1rem 1rem 0.25rem 1rem; }
   .chat-ai   { background: #353840; color: #F3F3F4; border-radius: 1rem 1rem 1rem 0.25rem; border: 1px solid rgba(243,243,244,0.07); }
 
   /* Slot pip animation */
@@ -70,7 +70,7 @@
   ::-webkit-scrollbar-thumb { background: #353840; border-radius: 3px; }
 
   .btn-nectar { transition: all 0.18s cubic-bezier(0.22,1,0.36,1); }
-  .btn-nectar:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(254,168,31,0.4); }
+  .btn-nectar:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(124,77,255,0.4); }
   .feature-card { transition: all 0.32s cubic-bezier(0.22,1,0.36,1); }
   .feature-card:hover { transform: translateY(-4px); }
 
@@ -121,19 +121,19 @@
     <div id="cin-sticky" style="position:sticky; top:0; height:100vh; overflow:hidden;">
 
       <!-- Ambient glow base -->
-      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 80%,rgba(254,168,31,0.07) 0%,transparent 70%);"></div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 80%,rgba(124,77,255,0.07) 0%,transparent 70%);"></div>
       <!-- AI activation glow pulse -->
-      <div id="cin-glow-pulse" style="position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse 55% 40% at 50% 50%,rgba(254,168,31,0.13) 0%,transparent 60%);"></div>
+      <div id="cin-glow-pulse" style="position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(ellipse 55% 40% at 50% 50%,rgba(124,77,255,0.13) 0%,transparent 60%);"></div>
 
       <!-- ① TITLE SCREEN -->
       <div id="cin-title" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:20;text-align:center;padding:2rem 1.5rem;will-change:opacity,transform;opacity:1;">
-        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.58rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(254,168,31,0.8);background:rgba(254,168,31,0.08);border:1px solid rgba(254,168,31,0.2);padding:0.45rem 1rem;border-radius:999px;margin-bottom:2rem;">
-          <span style="width:5px;height:5px;border-radius:50%;background:#FEA81F;display:inline-block;"></span>
+        <div style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.58rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:rgba(124,77,255,0.8);background:rgba(124,77,255,0.08);border:1px solid rgba(124,77,255,0.2);padding:0.45rem 1rem;border-radius:999px;margin-bottom:2rem;">
+          <span style="width:5px;height:5px;border-radius:50%;background:#7C4DFF;display:inline-block;"></span>
           Nectar AI · Pipeline Intelligence
         </div>
         <h2 style="font-size:clamp(3rem,8vw,6.5rem);font-weight:900;letter-spacing:-0.04em;color:#F3F3F4;line-height:0.93;margin-bottom:1.5rem;">
           Seu pipeline.<br/>
-          <span style="background:linear-gradient(135deg,#FEA81F 0%,#FFD166 50%,#FEA81F 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Reinventado.</span>
+          <span style="background:linear-gradient(135deg,#7C4DFF 0%,#A78BFF 50%,#7C4DFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Reinventado.</span>
         </h2>
         <p style="color:rgba(243,243,244,0.38);font-size:0.95rem;margin-bottom:3.5rem;max-width:380px;line-height:1.55;">Veja a inteligência artificial trabalhando em tempo real dentro do seu CRM</p>
         <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
@@ -163,8 +163,8 @@
             <div style="width:9px;height:9px;border-radius:50%;background:#FEBC2E;flex-shrink:0;"></div>
             <div style="width:9px;height:9px;border-radius:50%;background:#28C840;flex-shrink:0;"></div>
             <div style="flex:1;text-align:center;font-size:0.5rem;color:rgba(255,255,255,0.14);font-weight:500;">app.nectarcrm.com.br/pipeline</div>
-            <div id="cin-ai-status" style="display:flex;align-items:center;gap:0.35rem;font-size:0.5rem;font-weight:700;color:#FEA81F;background:rgba(254,168,31,0.1);border:1px solid rgba(254,168,31,0.2);padding:0.2rem 0.65rem;border-radius:999px;opacity:0;flex-shrink:0;will-change:opacity;">
-              <span style="width:4px;height:4px;border-radius:50%;background:#FEA81F;display:inline-block;animation:pulse 1.5s infinite;"></span>
+            <div id="cin-ai-status" style="display:flex;align-items:center;gap:0.35rem;font-size:0.5rem;font-weight:700;color:#7C4DFF;background:rgba(124,77,255,0.1);border:1px solid rgba(124,77,255,0.2);padding:0.2rem 0.65rem;border-radius:999px;opacity:0;flex-shrink:0;will-change:opacity;">
+              <span style="width:4px;height:4px;border-radius:50%;background:#7C4DFF;display:inline-block;animation:pulse 1.5s infinite;"></span>
               Nectar AI analisando...
             </div>
           </div>
@@ -178,20 +178,20 @@
               <div style="background:#2C2F38;border:1px solid rgba(255,255,255,0.05);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">TechCorp LTDA</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 48.000</div>
-                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:25%;height:100%;background:rgba(254,168,31,0.5);"></div></div>
-                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(254,168,31,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#FEA81F;opacity:0;transform:scale(0.7);white-space:nowrap;">42%</div>
+                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:25%;height:100%;background:rgba(124,77,255,0.5);"></div></div>
+                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(124,77,255,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#7C4DFF;opacity:0;transform:scale(0.7);white-space:nowrap;">42%</div>
               </div>
               <div style="background:#2C2F38;border:1px solid rgba(255,255,255,0.05);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">StartX Soluções</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 22.000</div>
-                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:15%;height:100%;background:rgba(254,168,31,0.5);"></div></div>
-                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(254,168,31,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#FEA81F;opacity:0;transform:scale(0.7);white-space:nowrap;">28%</div>
+                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:15%;height:100%;background:rgba(124,77,255,0.5);"></div></div>
+                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(124,77,255,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#7C4DFF;opacity:0;transform:scale(0.7);white-space:nowrap;">28%</div>
               </div>
               <div style="background:#2C2F38;border:1px solid rgba(255,255,255,0.05);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">VisionCo</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 15.500</div>
-                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:10%;height:100%;background:rgba(254,168,31,0.5);"></div></div>
-                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(254,168,31,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#FEA81F;opacity:0;transform:scale(0.7);white-space:nowrap;">19%</div>
+                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:10%;height:100%;background:rgba(124,77,255,0.5);"></div></div>
+                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(124,77,255,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#7C4DFF;opacity:0;transform:scale(0.7);white-space:nowrap;">19%</div>
               </div>
             </div>
 
@@ -208,7 +208,7 @@
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">DigitalMind</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 19.000</div>
                 <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:45%;height:100%;background:rgba(96,165,250,0.5);"></div></div>
-                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(254,168,31,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#FEA81F;opacity:0;transform:scale(0.7);white-space:nowrap;">61%</div>
+                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(124,77,255,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#7C4DFF;opacity:0;transform:scale(0.7);white-space:nowrap;">61%</div>
               </div>
               <div style="background:#2C2F38;border:1px solid rgba(239,68,68,0.18);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">Soluções Beta</div>
@@ -220,18 +220,18 @@
 
             <!-- PROPOSTA -->
             <div>
-              <div style="font-size:0.44rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(254,168,31,0.6);margin-bottom:0.4rem;padding:0 0.15rem;">Proposta <span style="color:rgba(243,243,244,0.16);font-weight:400;">2</span></div>
-              <div style="background:#2C2F38;border:1px solid rgba(254,168,31,0.15);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
+              <div style="font-size:0.44rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(124,77,255,0.6);margin-bottom:0.4rem;padding:0 0.15rem;">Proposta <span style="color:rgba(243,243,244,0.16);font-weight:400;">2</span></div>
+              <div style="background:#2C2F38;border:1px solid rgba(124,77,255,0.15);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">CoreData S.A.</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 41.000</div>
-                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:80%;height:100%;background:rgba(254,168,31,0.7);"></div></div>
+                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:80%;height:100%;background:rgba(124,77,255,0.7);"></div></div>
                 <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(74,222,128,0.4);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#4ade80;opacity:0;transform:scale(0.7);white-space:nowrap;">✓ 87%</div>
               </div>
-              <div style="background:#2C2F38;border:1px solid rgba(254,168,31,0.15);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
+              <div style="background:#2C2F38;border:1px solid rgba(124,77,255,0.15);border-radius:0.6rem;padding:0.6rem;margin-bottom:0.35rem;position:relative;">
                 <div style="font-size:0.6rem;font-weight:600;color:rgba(243,243,244,0.8);margin-bottom:0.15rem;">MegaSoft LTDA</div>
                 <div style="font-size:0.5rem;color:rgba(243,243,244,0.3);">R$ 35.000</div>
-                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:65%;height:100%;background:rgba(254,168,31,0.7);"></div></div>
-                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(254,168,31,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#FEA81F;opacity:0;transform:scale(0.7);white-space:nowrap;">72%</div>
+                <div style="margin-top:0.4rem;height:1.5px;border-radius:999px;background:rgba(255,255,255,0.06);overflow:hidden;"><div style="width:65%;height:100%;background:rgba(124,77,255,0.7);"></div></div>
+                <div class="cin-ai-badge" style="position:absolute;top:-5px;right:-5px;background:#1A1C22;border:1px solid rgba(124,77,255,0.35);border-radius:999px;padding:0.15rem 0.45rem;font-size:0.44rem;font-weight:700;color:#7C4DFF;opacity:0;transform:scale(0.7);white-space:nowrap;">72%</div>
               </div>
             </div>
 
@@ -259,7 +259,7 @@
         <div id="cin-ins-1" style="position:absolute;top:18%;right:2%;z-index:40;opacity:0;transform:translateX(12px);will-change:opacity,transform;max-width:210px;">
           <div style="background:rgba(17,18,21,0.97);backdrop-filter:blur(16px);border:1px solid rgba(74,222,128,0.35);border-radius:0.875rem;padding:0.75rem 1rem;box-shadow:0 12px 40px rgba(0,0,0,0.55),0 0 0 1px rgba(74,222,128,0.05);">
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-              <div style="width:16px;height:16px;border-radius:5px;background:#FEA81F;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:16px;height:16px;border-radius:5px;background:#7C4DFF;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
                 <svg width="8" height="8" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.96H11L10 22L19.91 11.04H13L13 2Z" fill="#23252C"/></svg>
               </div>
               <span style="font-size:0.44rem;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#4ade80;">✓ Alta Probabilidade</span>
@@ -273,7 +273,7 @@
         <div id="cin-ins-2" style="position:absolute;top:40%;left:1.5%;z-index:40;opacity:0;transform:translateX(-12px);will-change:opacity,transform;max-width:210px;">
           <div style="background:rgba(17,18,21,0.97);backdrop-filter:blur(16px);border:1px solid rgba(251,191,36,0.35);border-radius:0.875rem;padding:0.75rem 1rem;box-shadow:0 12px 40px rgba(0,0,0,0.55),0 0 0 1px rgba(251,191,36,0.05);">
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-              <div style="width:16px;height:16px;border-radius:5px;background:#FEA81F;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:16px;height:16px;border-radius:5px;background:#7C4DFF;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
                 <svg width="8" height="8" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.96H11L10 22L19.91 11.04H13L13 2Z" fill="#23252C"/></svg>
               </div>
               <span style="font-size:0.44rem;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#FBBF24;">⚠ Deal Parado</span>
@@ -287,7 +287,7 @@
         <div id="cin-ins-3" style="position:absolute;bottom:18%;left:25%;z-index:40;opacity:0;transform:translateY(12px);will-change:opacity,transform;max-width:210px;">
           <div style="background:rgba(17,18,21,0.97);backdrop-filter:blur(16px);border:1px solid rgba(239,68,68,0.35);border-radius:0.875rem;padding:0.75rem 1rem;box-shadow:0 12px 40px rgba(0,0,0,0.55),0 0 0 1px rgba(239,68,68,0.05);">
             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;">
-              <div style="width:16px;height:16px;border-radius:5px;background:#FEA81F;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:16px;height:16px;border-radius:5px;background:#7C4DFF;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
                 <svg width="8" height="8" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.96H11L10 22L19.91 11.04H13L13 2Z" fill="#23252C"/></svg>
               </div>
               <span style="font-size:0.44rem;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#f87171;">🔴 Risco Detectado</span>
@@ -301,15 +301,15 @@
 
       <!-- ③ AI INSIGHT PANEL (rises from bottom) -->
       <div id="cin-ai-panel" style="position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(20px);z-index:30;opacity:0;width:calc(100% - 2rem);max-width:720px;will-change:opacity,transform;">
-        <div style="background:rgba(17,18,21,0.96);backdrop-filter:blur(20px);border:1px solid rgba(254,168,31,0.25);border-radius:1rem;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;box-shadow:0 24px 80px rgba(0,0,0,0.65),0 0 0 1px rgba(254,168,31,0.04);">
-          <div style="width:34px;height:34px;border-radius:9px;background:#FEA81F;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+        <div style="background:rgba(17,18,21,0.96);backdrop-filter:blur(20px);border:1px solid rgba(124,77,255,0.25);border-radius:1rem;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;box-shadow:0 24px 80px rgba(0,0,0,0.65),0 0 0 1px rgba(124,77,255,0.04);">
+          <div style="width:34px;height:34px;border-radius:9px;background:#7C4DFF;flex-shrink:0;display:flex;align-items:center;justify-content:center;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.09 12.96H11L10 22L19.91 11.04H13L13 2Z" fill="#23252C"/></svg>
           </div>
           <div style="flex:1;min-width:0;">
-            <div style="font-size:0.48rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:#FEA81F;margin-bottom:0.2rem;">Nectar AI · Análise concluída</div>
+            <div style="font-size:0.48rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:#7C4DFF;margin-bottom:0.2rem;">Nectar AI · Análise concluída</div>
             <div style="font-size:0.72rem;color:rgba(243,243,244,0.6);line-height:1.4;"><span style="color:#F3F3F4;font-weight:600;">R$ 287.400 em jogo</span> · 3 deals em risco · CoreData com 87% de chance de fechar esta semana</div>
           </div>
-          <a href="#form" style="background:#FEA81F;color:#23252C;font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.5rem 1rem;border-radius:999px;text-decoration:none;flex-shrink:0;white-space:nowrap;">Ver detalhes</a>
+          <a href="#form" style="background:#7C4DFF;color:#23252C;font-size:0.58rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:0.5rem 1rem;border-radius:999px;text-decoration:none;flex-shrink:0;white-space:nowrap;">Ver detalhes</a>
         </div>
       </div>
 
@@ -909,7 +909,7 @@
               <div class="flex-1 rounded-t-md bg-light/8" style="height:55%"></div>
               <div class="flex-1 rounded-t-md bg-light/8" style="height:45%"></div>
               <div class="flex-1 rounded-t-md bg-light/8" style="height:70%"></div>
-              <div class="flex-1 rounded-t-md" style="height:90%; background: linear-gradient(180deg,#FEA81F,rgba(254,168,31,0.3))"></div>
+              <div class="flex-1 rounded-t-md" style="height:90%; background: linear-gradient(180deg,#7C4DFF,rgba(124,77,255,0.3))"></div>
               <div class="flex-1 rounded-t-md bg-light/5" style="height:60%"></div>
             </div>
             <div class="flex justify-between mb-5">
@@ -955,7 +955,7 @@
 
   <!-- ── URGENCY — DARK ────────────────── -->
   <section class="px-6 lg:px-12 xl:px-20 py-24 text-center relative overflow-hidden" style="background:#23252C;">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(254,168,31,0.07)_0%,transparent_65%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(124,77,255,0.07)_0%,transparent_65%)] pointer-events-none"></div>
     <div class="relative z-10">
       <h2 class="reveal text-5xl lg:text-6xl xl:text-7xl font-black tracking-tightest text-light leading-[0.95] mb-6">
         Apenas <span class="gradient-text">50 vagas.</span><br/>Zero lista de espera.
